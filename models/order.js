@@ -1,5 +1,6 @@
-const Sequelize=require("sequelize");
-const Order=Sequelize.define("order",{
+const Sequelize = require("sequelize");
+const sequelize = require("../database/database");
+const Order=sequelize.define("order",{
     id:{
         type: Sequelize.INTEGER,
         autoIncrement: true,
