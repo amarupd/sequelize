@@ -1,15 +1,15 @@
 const Sequelize = require("sequelize");
 const sequelize = require("../database/database");
-const Order=sequelize.define("order",{
-    id:{
+const Order = sequelize.define("order", {
+    id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true,
     },
-    total:{
+    total: {
         type: Sequelize.FLOAT,
         allowNull: false,
     }
 })
-module.exports=Order;
+module.exports = Order;
