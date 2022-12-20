@@ -18,4 +18,4 @@ const Customer = sequelize.define("customer", {
     }
 });
 
-module.exports=Customer;
+module.exports = Customer;
