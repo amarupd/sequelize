@@ -3,6 +3,7 @@ const Customer = require("./models/customer");
 const Order = require("./models/order");
 
 Customer.hasMany(Order);
+let customerId=null;
 sequelize
     .sync({force:true})
     .then((result) => {
@@ -10,11 +11,16 @@ sequelize
         console.log(result);
     })
     .then(customer=>{
+        customerId=customer.id;
         console.log("first customer created",customer);
-        return Order.create({total:7780})
+        return customer.createOrder({total:7780});
     })
     .then(order=>{
         console.log("order is:", order);
+        return Order.findAll({where:customerId});
+    })
+    .then(orders=>{
+        console.log("order belong to customer",orders);
     })
     .catch((err) => {
         console.log(err);
