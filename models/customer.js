@@ -16,5 +16,6 @@ const Customer = sequelize.define("customer", {
         type: Sequelize.STRING,
         allowNull: false,
     }
+});
 
-})
+module.exports=Customer;
