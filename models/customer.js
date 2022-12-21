@@ -15,9 +15,10 @@ const Customer = sequelize.define("customer", {
 
     },
     email: {
-        
+
         type: Sequelize.STRING,
         allowNull: false,
+        
     }
 });
 
