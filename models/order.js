@@ -1,5 +1,13 @@
+//requiring the sequelize
+
 const Sequelize = require("sequelize");
+
+//requiring the database
+
 const sequelize = require("../database/database");
+
+// creating the order model to get the data
+
 const Order = sequelize.define("order", {
     id: {
         type: Sequelize.INTEGER,
@@ -11,7 +19,7 @@ const Order = sequelize.define("order", {
 
         type: Sequelize.FLOAT,
         allowNull: false,
-        
+
     }
 })
 module.exports = Order;
