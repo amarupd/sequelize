@@ -8,8 +8,10 @@ const Order = sequelize.define("order", {
         primaryKey: true,
     },
     total: {
+
         type: Sequelize.FLOAT,
         allowNull: false,
+        
     }
 })
 module.exports = Order;
