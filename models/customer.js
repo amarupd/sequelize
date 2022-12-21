@@ -9,10 +9,13 @@ const Customer = sequelize.define("customer", {
         primaryKey: true,
     },
     name: {
+
         type: Sequelize.STRING,
         allowNull: false,
+
     },
     email: {
+        
         type: Sequelize.STRING,
         allowNull: false,
     }
