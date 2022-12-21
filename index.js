@@ -5,15 +5,15 @@ const Order = require("./models/order");
 Customer.hasMany(Order);
 let customerId=null;
 sequelize
-    .sync({force:true})
+    .sync()
     .then((result) => {
-        return Customer.create({name:"chandler bing",email:"cb@gmail.com"})
+        return Customer.create({name:"amar dutt upadhyay",email:"amarduttupadhyay@gmail.com"})
         console.log(result);
     })
     .then(customer=>{
         customerId=customer.id;
         console.log("first customer created",customer);
-        return customer.createOrder({total:7780});
+        return customer.createOrder({total:48});
     })
     .then(order=>{
         console.log("order is:", order);
